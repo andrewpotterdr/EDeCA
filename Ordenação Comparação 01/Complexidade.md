@@ -22,18 +22,16 @@
 ## Funções de complexidade teóricas para os algoritmos de ordenação
 
 ### Selection Sort - C(n) = O(n2) para todos os casos
-### Insertion Sort - C(n) = O(n) para o melhor caso e C(n) = O(n2) para médio e pior casos.
 
-|         Selection Sort          |
-|-----------------|---------------|
 | Tamanho Entrada | Complexidade  |
 | -               | Todos         |
 | 1.000           | 1.000.000     |
 | 10.000          | 100.000.000   |
 | 100.000         | 1.000.000.000 |
 
-|              Insertion Sort               |
-|-----------------|-------------------------|
+
+### Insertion Sort - C(n) = O(n) para o melhor caso e C(n) = O(n2) para médio e pior casos.
+
 | Tamanho Entrada | Complexidade            |
 | -               | Melhor  | Pior e Médio  |
 | 1.000           | 1.000   | 1.000.000     |
