@@ -1,4 +1,4 @@
-# Complexidade dos Algoritmos de acordo com o tempo de execução
+# Complexidade dos algoritmos de acordo com o tempo de execução
 
 |-----------------------------|-----------------------------|
 |       Selection Sort        |       Insertion Sort        |
@@ -16,3 +16,6 @@
 | num.100000.2.in | 26.431435 | num.100000.2.in | 34.509247 |
 | num.100000.3.in | 26.523428 | num.100000.3.in | 34.521854 |
 | num.100000.4.in | 26.399106 | num.100000.4.in | 34.610037 |
+
+  > Observação:
+  > Os tempos de execução obtidos foram adquiridos por meio da execução do programa `main` no meu computador pessoal, os tempos de execução tiveram pequenas variações para cada execução com a memsma entrada e com o mesmo algoritmo de ordenação.
