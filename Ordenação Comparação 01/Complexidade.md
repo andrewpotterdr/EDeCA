@@ -1,6 +1,5 @@
 # Complexidade dos algoritmos de acordo com o tempo de execução
 
-|-----------------------------|-----------------------------|
 |       Selection Sort        |       Insertion Sort        |
 |-----------------------------|-----------------------------|
 |     Entrada     | Tempo (s) |     Entrada     | Tempo (s) |
@@ -19,3 +18,17 @@
 
   > Observação:
   > Os tempos de execução obtidos foram adquiridos por meio da execução do programa `main` no meu computador pessoal, os tempos de execução tiveram pequenas variações para cada execução com a memsma entrada e com o mesmo algoritmo de ordenação.
+
+## Funções de complexidade teóricas para os algoritmos de ordenação
+
+### Selection Sort - C(n) = O(n2) para todos os casos
+### Insertion Sort - C(n) = O(n) para o melhor caso e C(n) = O(n2) para médio e pior casos.
+
+|---------------------------------|-------------------------------------------|
+|         Selection Sort          |              Insertion Sort               |
+|---------------------------------|-------------------------------------------|
+| Tamanho Entrada | Complexidade  | Tamanho Entrada | Complexidade            |
+|                 | Todos         |                 | Melhor  | Pior e Médio  |
+| 1.000           | 1.000.000     | 1.000           | 1.000   | 1.000.000     |
+| 10.000          | 100.000.000   | 10.000          | 10.000  | 100.000.000   |
+| 100.000         | 1.000.000.000 | 100.000         | 100.000 | 1.000.000.000 |
