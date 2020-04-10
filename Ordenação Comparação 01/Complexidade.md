@@ -24,6 +24,7 @@
 ### Selection Sort - C(n) = O(n2) para todos os casos
 
 | Tamanho Entrada | Complexidade  |
+|-----------------|---------------|
 | -               | Todos         |
 | 1.000           | 1.000.000     |
 | 10.000          | 100.000.000   |
@@ -33,6 +34,7 @@
 ### Insertion Sort - C(n) = O(n) para o melhor caso e C(n) = O(n2) para médio e pior casos.
 
 | Tamanho Entrada | Complexidade            |
+|-----------------|-------------------------|
 | -               | Melhor  | Pior e Médio  |
 | 1.000           | 1.000   | 1.000.000     |
 | 10.000          | 10.000  | 100.000.000   |
