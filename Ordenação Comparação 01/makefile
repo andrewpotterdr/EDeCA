@@ -10,4 +10,4 @@ sort.o: sort.c sort.h
 	gcc -c sort.c
 
 clean:
-	rm *.o
+	rm -rf *.o

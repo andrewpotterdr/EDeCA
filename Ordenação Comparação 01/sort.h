@@ -1,2 +1,2 @@
-int * selectionSort(int v[], int size);
-int * insertionSort(int v[], int size);
+int * selectionSort(int v[], int size, double *t);
+int * insertionSort(int v[], int size, double *t);

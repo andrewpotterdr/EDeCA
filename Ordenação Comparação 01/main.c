@@ -9,6 +9,7 @@ void main(int argc, char** argv)
     FILE *file;
     int number, i, size, option;
     int v[MAX];
+    double executionTime = 0;
 
     file = fopen(argv[1], "r");
     if(!file) perror("File not found.\n");
@@ -24,10 +25,12 @@ void main(int argc, char** argv)
     switch(option)
     {
         case 1:
-            printVector(size, selectionSort(v, size));
+            printVector(size, selectionSort(v, size, &executionTime));
+            printf("Execution time for a %d size entry with Selection Sort: %lf seconds.", size, executionTime);
         break;
         case 2:
-            printVector(size, insertionSort(v, size));
+            printVector(size, insertionSort(v, size, &executionTime));
+            printf("Execution time for a %d size entry with Insertion Sort: %lf seconds.", size, executionTime);
         break;
     }
 }

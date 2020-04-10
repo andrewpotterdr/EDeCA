@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <time.h>
 
-int * selectionSort(int v[], int size)
+int * selectionSort(int v[], int size, double *t)
 {
+    clock_t tempo;
+    tempo = clock();
     int i, j, smallestIndex, temp;
     for(i = 0; i < size-1; i++)
     {
@@ -20,11 +23,15 @@ int * selectionSort(int v[], int size)
             v[smallestIndex] = temp;
         }
     }
+    tempo = clock() - tempo;
+    *t = *t + tempo / (double)CLOCKS_PER_SEC;
     return v;
 }
 
-int * insertionSort(int v[], int size)
+int * insertionSort(int v[], int size, double *t)
 {
+    clock_t tempo;
+    tempo = clock();
     int i, j, temp;
     for(i = 0; i < size-1; i++)
     {
@@ -38,5 +45,7 @@ int * insertionSort(int v[], int size)
             }
         }
     }
+    tempo = clock() - tempo;
+    *t = *t + tempo / (double)CLOCKS_PER_SEC;
     return v;
 }
