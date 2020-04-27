@@ -20,7 +20,7 @@ void main(int argc, char** argv)
         v[i] = number;
     }
     fclose(file);
-    printf("Choose the sorting method:\n1 - Selection Sort\n2 - Insertion Sort\n");
+    printf("Choose the sorting method:\n1 - Selection Sort\n2 - Insertion Sort\n3 - Merge Sort\n4 - Quick Sort\n");
     scanf("%d", &option);
     switch(option)
     {
@@ -32,14 +32,13 @@ void main(int argc, char** argv)
             printVector(size, insertionSort(v, size, &executionTime));
             printf("Execution time for a %d size entry with Insertion Sort: %lf seconds.", size, executionTime);
         break;
-    }
-}
-
-void printVector(int size, int vec[size])
-{
-    int i;
-    for(i = 0; i < size; i++)
-    {
-        printf("%d\n", vec[i]);
+        case 3:
+            mergeSort(v,0,size-1);
+            printVector(size, v);
+        break;
+        case 4:
+            quickSort(v,0,size-1);
+            printVector(size,v);
+        break;
     }
 }
