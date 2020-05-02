@@ -2,13 +2,11 @@
 #include "sort.h"
 #define MAX 100001
 
-void printVector(int size, int vec[size]);
-
 void main(int argc, char** argv)
 {
     FILE *file;
     int number, i, size, option;
-    int v[MAX];
+    long long v[MAX];
     double executionTime = 0;
 
     file = fopen(argv[1], "r");
@@ -20,7 +18,7 @@ void main(int argc, char** argv)
         v[i] = number;
     }
     fclose(file);
-    printf("Choose the sorting method:\n1 - Selection Sort\n2 - Insertion Sort\n3 - Merge Sort\n4 - Quick Sort\n");
+    printf("Choose the sorting method:\n1 - Selection Sort\n2 - Insertion Sort\n3 - Merge Sort\n4 - Quick Sort\n5 - Counting Sort\n6 - Radix Sort\n");
     scanf("%d", &option);
     switch(option)
     {
@@ -33,12 +31,20 @@ void main(int argc, char** argv)
             printf("Execution time for a %d size entry with Insertion Sort: %lf seconds.", size, executionTime);
         break;
         case 3:
-            mergeSort(v,0,size-1);
+            mergeSort(v, 0, size-1);
             printVector(size, v);
         break;
         case 4:
-            quickSort(v,0,size-1);
-            printVector(size,v);
+            quickSort(v, 0, size-1);
+            printVector(size, v);
+        break;
+        case 5:
+            countingSort(v, size);
+            printVector(size, v);
+        break;
+        case 6:
+            radixSort(v, size);
+            printVector(size, v);
         break;
     }
 }
