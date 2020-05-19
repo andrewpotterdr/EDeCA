@@ -17,3 +17,8 @@ void countingSort(long long v[], int size);
 void push(number * head, long long value);
 long long pop(number ** head);
 void radixSort(long long v[], int size);
+int left(int i);
+int right(int i);
+void maxHeapify(long long v[], int heapSize, int i);
+void buildMaxHeap(long long v[], int heapSize);
+void heapSort(long long v[], int heapSize);

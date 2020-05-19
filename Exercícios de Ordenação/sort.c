@@ -329,3 +329,60 @@ void radixSort(long long v[], int size)
         }
     }
 }
+
+int left(int i)
+{
+    return 2*i+1;
+}
+
+int right(int i)
+{
+    return 2*i+2;
+}
+
+void maxHeapify(long long v[], int heapSize, int i)
+{
+    int l = left(i), r = right(i), biggest;
+    if((l < heapSize) && (v[l] > v[i]))
+    {
+        biggest = l;
+    }
+    else
+    {
+        biggest = i;
+    }
+    if((r < heapSize) && (v[r] > v[biggest]))
+    {
+        biggest = r;
+    }
+    if(biggest != i)
+    {
+        long long aux = v[i];
+        v[i] = v[biggest];
+        v[biggest] = aux;
+        maxHeapify(v,heapSize,biggest);
+    }
+}
+
+void buildMaxHeap(long long v[], int heapSize)
+{
+    int i;
+    for(i = floor(heapSize/2); i >= 0; i--)
+    {
+        maxHeapify(v,heapSize,i);
+    }
+}
+
+void heapSort(long long v[], int heapSize)
+{
+    int i, size = heapSize;
+    buildMaxHeap(v,heapSize);
+    for(i = heapSize-1; i > 0; i--)
+    {
+        /*long long aux = v[0];
+        v[0] = v[i];
+        v[i] = aux;*/
+        heapSize--;
+        maxHeapify(v,heapSize,0);
+    }
+}

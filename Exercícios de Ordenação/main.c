@@ -18,7 +18,7 @@ void main(int argc, char** argv)
         v[i] = number;
     }
     fclose(file);
-    printf("Choose the sorting method:\n1 - Selection Sort\n2 - Insertion Sort\n3 - Merge Sort\n4 - Quick Sort\n5 - Counting Sort\n6 - Radix Sort\n");
+    printf("Choose the sorting method:\n1 - Selection Sort\n2 - Insertion Sort\n3 - Merge Sort\n4 - Quick Sort\n5 - Counting Sort\n6 - Radix Sort\n7 - Heap Sort\n");
     scanf("%d", &option);
     switch(option)
     {
@@ -44,6 +44,10 @@ void main(int argc, char** argv)
         break;
         case 6:
             radixSort(v, size);
+            printVector(size, v);
+        break;
+        case 7:
+            heapSort(v, size);
             printVector(size, v);
         break;
     }
