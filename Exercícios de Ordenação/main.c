@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include "sort.h"
-#define MAX 100001
 
 void main(int argc, char** argv)
 {
     FILE *file;
     int number, i, size, option;
-    long long v[MAX];
     double executionTime = 0;
 
     file = fopen(argv[1], "r");
     if(!file) perror("File not found.\n");
     fscanf(file, "%d", &size);
+    long long v[size];
     for(i = 0; i<size; i++)
     {
         fscanf(file, "%d", &number);
